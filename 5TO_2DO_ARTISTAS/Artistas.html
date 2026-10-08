@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Index.html">INICIO</a></li>
+                <li><a href="Artistas.html">ARTISTAS</a></li>
+                <li><a href="Canciones.html">CANCIONES</a></li>
+                <li><a href="Contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+
+    <main>
+        <center>
+
+            <div class="flotante">
+                <strong>SECCIÓN</strong>
+                <br> 
+                ARTISTAS FAVORITOS
+            </div>
+            <br>
+
+            <div class="card">
+                <img src="Bruno.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <br>
+            <div class="card-title">BRUNO MARS</div>
+            <br>
+            <div class="card-description">
+                <center>Cantante, compositor y productor estadounidense conocido por su gran talento, sus canciones pegajosas y su estilo inspirado en el pop, funk y R&B.</center>
+            </div>
+            </div>
+            <br>
+            <center><button class="boton" onclick="agregarAlCarrito('Bruno Mars')">Agregar a Biblioteca de Favoritos</button></center>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="Shakira.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <br>
+            <div class="card-title">SHAKIRA</div>
+            <br>
+            <div class="card-description">
+                <center>Cantante y compositora colombiana reconocida internacionalmente por su voz, sus canciones y su mezcla de pop latino con diferentes estilos musicales.</center>
+            </div>
+            </div>
+            <br>
+            <center><button class="boton" onclick="agregarAlCarrito('Shakira')">Agregar a Biblioteca de Favoritos</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="Rauw.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <br>
+            <div class="card-title">RAUW ALEJANDRO</div>
+            <br>
+            <div class="card-description">
+                <center>Cantante y compositor puertorriqueño destacado por su estilo urbano y sus canciones de reguetón y pop latino. Es reconocido por su energía y sus presentaciones.</center>
+            </div>
+            </div>
+            <br>
+            <center><button class="boton" onclick="agregarAlCarrito('Rauw Alejandro')">Agregar a Biblioteca de Favoritos</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>BIBLIOTECA DE ARTISTAS FAVORITOS</h2>
+            <div class="contador"><strong>Artistas agregados:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+            <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="Index.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="Artistas.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="Canciones.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="Contacto.html">4</a></li>
+            </ul>
+            </nav>
+
+        </center>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
